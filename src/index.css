@@ -1,3 +1,5 @@
+@import './styles/variables.scss';
+
 @font-face {
     font-family: ggsans;
     src: url('./assets/fonts/ggsans.ttf');

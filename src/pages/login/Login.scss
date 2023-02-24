@@ -12,6 +12,7 @@
     .logo-container {
         max-width: 184px;
         margin: 0 auto;
+        margin-bottom: 64px;
 
         img {
             width: 100%;
@@ -20,20 +21,32 @@
     }
 
     .generic-container {
-        .login-button {
-            cursor: pointer;
+        .disabled{
+            background-color: $onBackground !important;
+            cursor: default !important;
+        }
+        
+        .momento {
+            background-color: $primary;
+            font-family: forte;
+        }
+        
+        .discord {
             background-color: $discord-primary;
+            font-family: ggsans;
+        }
+        
+        .login-button {
             height: 64px;
             padding: 0px 16px;
-            // width: 64px;
             border-radius: 8px;
-            margin-top: 64px;
             display: flex;
+            margin-bottom: 8px;
             align-items: center;
-            justify-content: center;
+            cursor: pointer;
 
-            &__dc-logo-container {
-                max-width: 40px;
+            &__login-logo-container {
+                width: 40px;
 
                 img {
                     width: 100%;
@@ -44,7 +57,6 @@
                 margin-left: 16px;
                 font-size: 24px;
                 color: $onSecondary;
-                font-family: ggsans;
             }
         }
     }
@@ -64,6 +76,7 @@
             .login-button {
                 padding: 0;
                 width: 64px;
+                justify-content: center;
                 &__label {
                     display: none;
                 }
