@@ -1,8 +1,11 @@
 import './Login.scss';
 import logo from '../../assets/logo/new-big.png'
 import LoginButton from './login-button/LoginButton';
+import { useContext } from 'react';
 
 export default function () {
+    // const [user, setUser] = useContext()
+
     return (
         <div className="page-login">
             <div className="logo-container">

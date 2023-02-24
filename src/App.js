@@ -2,20 +2,24 @@ import Login from './pages/login/Login';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';
-import AuthDiscord from './pages/authdiscord/AuthDiscord';
+import Auth from './pages/auth/Auth';
+import { AuthProvider } from './contexts/AuthProvider';
+import UserSelect from './pages/user-select/User-Select';
 
 function App() {
   return (
-    <BrowserRouter>
-      <div className="App">
-        <ResponseInterceptor />
-        <Routes>
-          <Route path="/" exact element={<>teste</>} />
-          <Route path="/login" exact element={<Login />} />
-          <Route path="/auth" exact element={<AuthDiscord />} />
-        </Routes>
-      </div >
-    </BrowserRouter>
+    <div className="App">
+      <BrowserRouter>
+        <AuthProvider>
+          <ResponseInterceptor />
+          <Routes>
+            <Route path="/" exact element={<UserSelect />} />
+            <Route path="/login" exact element={<Login />} />
+            <Route path="/auth" exact element={<Auth />} />
+          </Routes>
+        </AuthProvider>
+      </BrowserRouter>
+    </div >
   );
 }
 
