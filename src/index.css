@@ -1,0 +1,15 @@
+@font-face {
+    font-family: ggsans;
+    src: url('./assets/fonts/ggsans.ttf');
+}
+
+@font-face {
+    font-family: forte;
+    src: url('./assets/fonts/fortefont.ttf');
+}
+
+.generic-page {
+    margin: 0 auto;
+    padding: 16px;
+    max-width: 1280px;
+}
