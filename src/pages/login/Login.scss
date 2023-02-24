@@ -20,47 +20,6 @@
         }
     }
 
-    .generic-container {
-        .disabled{
-            background-color: $onBackground !important;
-            cursor: default !important;
-        }
-        
-        .momento {
-            background-color: $primary;
-            font-family: forte;
-        }
-        
-        .discord {
-            background-color: $discord-primary;
-            font-family: ggsans;
-        }
-        
-        .login-button {
-            height: 64px;
-            padding: 0px 16px;
-            border-radius: 8px;
-            display: flex;
-            margin-bottom: 8px;
-            align-items: center;
-            cursor: pointer;
-
-            &__login-logo-container {
-                width: 40px;
-
-                img {
-                    width: 100%;
-                }
-            }
-
-            &__label {
-                margin-left: 16px;
-                font-size: 24px;
-                color: $onSecondary;
-            }
-        }
-    }
-
     &__trademark {
         position: absolute;
         bottom: 0;
