@@ -1,35 +1,37 @@
 import axios from "axios";
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
+import { AuthContext } from "../../contexts/AuthProvider";
 
-export default function Auth () {
+export default function Auth() {
     const Navigate = useNavigate()
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     const [accessToken, tokenType] = [fragment.get('access_token'), fragment.get('token_type')];
 
-    async function getTokenFromURL() {
+    const { user, setUser } = useContext(AuthContext)
 
-        if (accessToken) {
-            localStorage.setItem('access_token', accessToken)
-            localStorage.setItem('token_type', tokenType)
-        }
-
-        return
-    }
-
-
+    
+    
     useEffect(() => {
-        async function fetchDiscordUser(token_type, access_token) {
-            const options = { headers: { 'authorization': `${token_type} ${access_token}` } }
-            const result = await axios.get("https://discord.com/api/users/@me", options)
-            
-            if(result.status === 200) {
+        async function getUserFromURL() {
+            if (accessToken) {
+                const config = {'Authorization': `${tokenType} ${accessToken}`}
+                const response = await axios.get('https://discordapp.com/api/users/@me', {headers: config})
+    
+                localStorage.setItem('access_token', accessToken)
+                localStorage.setItem('token_type', tokenType)
+                localStorage.setItem('user', JSON.stringify(response.data))
+                setUser(response.data)
+                
                 Navigate('/')
             }
+            else{
+                Navigate('/login')
+            }
+            return
         }
-
-        getTokenFromURL()
-        fetchDiscordUser(tokenType, accessToken);
+        
+        getUserFromURL()
     }, [])
     return
 }

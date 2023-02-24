@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.page-user-select {
+    width: 100vw;
+    font-family: forte;
+    text-align: center;
+    
+    &__welcome-label {
+        margin-top: 200px;
+        font-size: 48px;
+        color: $onBackground;
+    }
+    
+    &__select-label {
+        font-size: 32px;
+        margin-top: 8px;
+        color: $onBackground;
+    }
+}
