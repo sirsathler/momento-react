@@ -4,7 +4,7 @@ import { AuthContext } from './AuthProvider'
 
 
 const ProtectedRoute = ({ children }) => {
-    const { user, loading, access_token } = useContext(AuthContext)
+    const { user, loading } = useContext(AuthContext)
     if (loading) {
         return <h1>loading...</h1>
     }

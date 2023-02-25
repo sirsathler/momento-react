@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthProvider'
 import './User-Select.scss'
 
-export default function () {
+export default function UserSelect() {
     const { user } = useContext(AuthContext)
     return (
         <div className="generic-page page-user-select">

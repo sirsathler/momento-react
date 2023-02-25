@@ -1,12 +1,14 @@
-import Login from './pages/login/Login';
 import './App.css';
+
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';
-import Auth from './pages/auth/Auth';
-import { AuthProvider } from './contexts/AuthProvider';
-import UserSelect from './pages/user-select/User-Select';
 import ProtectedRoute from './contexts/ProtectedRoute';
 
+import Auth from './pages/auth/Auth';
+import { AuthProvider } from './contexts/AuthProvider';
+import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';
+
+import UserSelect from './pages/user-select/User-Select';
+import Login from './pages/login/Login';
 
 function App() {
 
