@@ -2,7 +2,7 @@ import "./ProfileCard.scss"
 
 export function ProfileCard(props) {
     return (
-        <div className="profile-card-container">
+        <div className="profile-card-container" onClick={()=>{props.handleSelectProfile(props.serverId)}}>
             <div className="profile-img-container">
                 <img src={props.profilePictureURL} alt="profile-picture" />
             </div>

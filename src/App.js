@@ -9,6 +9,7 @@ import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor
 
 import UserSelect from './pages/user-select/UserSelect';
 import Login from './pages/login/Login';
+import { Feed } from './pages/feed/Feed';
 
 function App() {
 
@@ -20,7 +21,7 @@ function App() {
           <AuthProvider>
             <ResponseInterceptor />
             <Routes>
-              <Route path="/" exact element={<ProtectedRoute><UserSelect /></ProtectedRoute>} />
+              <Route path="/" exact element={<ProtectedRoute><Feed /></ProtectedRoute>} />
               <Route path="/ata" exact element={<ProtectedRoute>{<>ta</>}</ProtectedRoute>} />
               <Route path="/login" exact element={<Login />} />
               <Route path="/auth" exact element={<Auth />} />

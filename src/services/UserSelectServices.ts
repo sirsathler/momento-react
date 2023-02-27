@@ -1,4 +1,4 @@
-import { API } from "../../api/API";
+import { API } from "../api/API";
 
 export class UserSelectServices {
     static async fetchUserProfiles(userId: string, token: String) {
