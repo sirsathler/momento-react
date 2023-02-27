@@ -1,0 +1,11 @@
+@import '../../../styles/variables.scss';
+
+.powered-by {
+    text-align: center;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    right: 0;
+    color: $onBackground;
+    font-size: 24px;
+}

@@ -2,10 +2,12 @@
 
 .page-user-select {
     width: 100vw;
+    height: 100vh;
     text-align: center;
+    position: relative;
 
     &__welcome-label {
-        margin-top: 200px;
+        padding-top: 200px;
         font-size: 48px;
         color: $onBackground;
     }
@@ -16,11 +18,18 @@
         color: $onBackground;
     }
 
+    &__logout-label {
+        color: $onBackground;
+        font-size: 24px;
+        font-style: italic;
+    }
+    
     .select-profile-container {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-
+        
         margin-top: 52px;
+        margin-bottom: 80px;
     }
 }

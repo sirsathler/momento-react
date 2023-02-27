@@ -19,3 +19,9 @@
 .forte-font {
     font-family: forte;
 }
+.strong-font {
+    font-weight: 700;
+}
+.light-font {
+    font-weight: 300;
+}

@@ -1,6 +1,7 @@
 import './Login.scss';
 import logo from '../../assets/logo/new-big.png'
 import LoginButton from './login-button/LoginButton';
+import { Powered } from '../../global/components/powered/Powered';
 
 export default function Login () {
     return (
@@ -15,7 +16,7 @@ export default function Login () {
                 <LoginButton type="momento"/>
             </div>
 
-            <p className="page-login__trademark">powered by <span className="forte-font">momento</span></p>
+            <Powered/>
         </div>
     );
 }
