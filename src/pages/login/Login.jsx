@@ -8,12 +8,14 @@ export default function Login () {
             <div className="logo-container">
                 <img src={logo} alt="momento-logo" />
             </div>
+            <h1 className="page-login__title forte-font">momento</h1>
+            <h2 className="page-login__subtitle forte-font">a rpg social media</h2>
             <div className="generic-container">
                 <LoginButton type="dc"/>
                 <LoginButton type="momento"/>
             </div>
 
-            <p className="page-login__trademark">powered by momento</p>
+            <p className="page-login__trademark">powered by <span className="forte-font">momento</span></p>
         </div>
     );
 }

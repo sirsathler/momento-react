@@ -20,7 +20,7 @@ export default function LoginButton(props) {
                     <div className="login-button__login-logo-container">
                         <img src={logo_alt} alt="next" />
                     </div>
-                    <p className="login-button__label">Continuar com momento</p>
+                    <p className="login-button__label">Continuar com <span className="forte-font">momento</span></p>
                 </a>
             )
         default:
