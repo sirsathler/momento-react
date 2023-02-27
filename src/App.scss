@@ -3,6 +3,8 @@
    License: none (public domain)
 */
 
+@import './styles/variables.scss';
+
 html,
 body,
 div,
@@ -135,4 +137,8 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+.App {
+  background-color: $background;
 }

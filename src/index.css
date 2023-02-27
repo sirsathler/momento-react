@@ -10,18 +10,24 @@
     src: url('./assets/fonts/fortefont.ttf');
 }
 
-.generic-page {
+.generic-container {
     margin: 0 auto;
     /* padding: 16px; */
     max-width: 1280px;
 }
 
+.flex {
+    display: flex;
+}
+
 .forte-font {
     font-family: forte;
 }
+
 .strong-font {
     font-weight: 700;
 }
+
 .light-font {
     font-weight: 300;
 }

@@ -1,8 +1,8 @@
-import './App.css';
+import './App.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './contexts/ProtectedRoute';
-
+  
 import Auth from './pages/auth/Auth';
 import { AuthProvider } from './contexts/AuthProvider';
 import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';

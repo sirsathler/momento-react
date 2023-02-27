@@ -30,7 +30,7 @@ export default function UserSelect() {
     }
 
     return (
-        <div className="generic-page page-user-select">
+        <div className="generic-container page-user-select">
             <h1 className="page-user-select__welcome-label">Olá, <span className="strong-font">{user.username}</span>!</h1>
             <h2 className="page-user-select__select-label light-font">escolha um perfil para começarmos...</h2>
 
