@@ -11,6 +11,7 @@ import UserSelect from './pages/user-select/UserSelect';
 import Login from './pages/login/Login';
 import { Feed } from './pages/feed/Feed';
 import { Navbar } from './global/components/navbar/Navbar';
+import { Bottombar } from './global/components/bottombar/Bottombar';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
           <AuthProvider>
             <ResponseInterceptor />
             <Navbar />
+            <Bottombar />
             <Routes>
               <Route path="/" exact element={<ProtectedRoute><Feed /></ProtectedRoute>} />
               <Route path="/ata" exact element={<ProtectedRoute>{<>ta</>}</ProtectedRoute>} />

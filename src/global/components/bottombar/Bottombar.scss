@@ -1,0 +1,33 @@
+@import '../../../styles/variables.scss';
+
+.bottombar {
+    background-color: $background;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: solid 1px $onBackgroundAlt;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 1024px;
+        height: 48px;
+        padding: 8px;
+        margin: 0 auto;
+
+        .left {
+
+        }
+
+        .middle {
+            display: flex;
+            align-items: center;
+        }
+
+        .right {
+
+        }
+    }
+}

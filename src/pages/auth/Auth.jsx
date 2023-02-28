@@ -1,6 +1,6 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-import { fetchDiscordUserByToken } from "../../api/discordAPI";
+import { fetchUserByDiscordToken } from "../../api/DiscordAPI";
 import { AuthContext } from "../../contexts/AuthProvider";
 
 export default function Auth() {
@@ -14,7 +14,7 @@ export default function Auth() {
 
     useEffect(() => {
         async function getUserFromURL() {
-            const discordUser = await fetchDiscordUserByToken(accessToken, tokenType);
+            const discordUser = await fetchUserByDiscordToken(accessToken, tokenType);
             if (accessToken && discordUser) {
                 localStorage.setItem('access_token', accessToken)
                 localStorage.setItem('token_type', tokenType)
