@@ -2,7 +2,7 @@ import './App.scss';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ProtectedRoute from './contexts/ProtectedRoute';
-  
+
 import Auth from './pages/auth/Auth';
 import { AuthProvider } from './contexts/AuthProvider';
 import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';
@@ -10,6 +10,7 @@ import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor
 import UserSelect from './pages/user-select/UserSelect';
 import Login from './pages/login/Login';
 import { Feed } from './pages/feed/Feed';
+import { Navbar } from './global/components/navbar/Navbar';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <BrowserRouter>
           <AuthProvider>
             <ResponseInterceptor />
+            <Navbar />
             <Routes>
               <Route path="/" exact element={<ProtectedRoute><Feed /></ProtectedRoute>} />
               <Route path="/ata" exact element={<ProtectedRoute>{<>ta</>}</ProtectedRoute>} />

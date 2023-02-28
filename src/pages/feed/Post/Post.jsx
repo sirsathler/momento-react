@@ -13,7 +13,9 @@ export function Post(props) {
                 </div>
             </div>
             <div className="post-body">
-                <img src={props.postImageURL} alt="post-image" />
+                <div className="post-body__post-img">
+                    <img src={props.postImageURL} alt="post-image" />
+                </div>
             </div>
             <div className="post-footer">
 
