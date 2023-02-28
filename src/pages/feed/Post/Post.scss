@@ -1,0 +1,52 @@
+@import "../../../styles/variables.scss";
+
+.post-container {
+    display: flex;
+    flex-direction: column;
+    max-width: 816px;
+    padding: 16px;
+    box-shadow: 0px 0px 5px 0px $onBackgroundAlt;
+    margin-bottom: 24px;
+    
+    .post-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 8px;
+        
+        &__profile-picture {
+            overflow: hidden;
+            width: 56px;
+            height: 56px;
+            border-radius: 100%;
+            margin-right: 8px;
+            
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
+        
+        .post-user-info {
+            color: $secondary;
+            
+            &__user-name {
+                font-size: 16px;
+                font-weight: 600;
+                
+            }
+            
+            &__username {
+                color: $onBackground;
+                font-size: 16px;
+                font-style: italic;
+            }
+        }
+    }
+    
+    .post-body {
+        cursor: pointer;
+        img {
+            max-width: 100%;
+        }
+    }
+}

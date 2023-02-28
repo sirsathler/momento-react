@@ -114,6 +114,7 @@ section {
 
 body {
   line-height: 1;
+  background-color: $background;
 }
 
 ol,
@@ -140,5 +141,4 @@ table {
 }
 
 .App {
-  background-color: $background;
 }
