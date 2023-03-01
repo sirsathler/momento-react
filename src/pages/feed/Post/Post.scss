@@ -3,8 +3,8 @@
 .post-container {
     display: flex;
     flex-direction: column;
-    max-width: 816px;
-    padding: 16px;
+    width: 816px;
+    padding: 16px 16px 0 16px;
     border: solid 1px $onBackgroundAlt;
     margin-bottom: 24px;
 
@@ -19,10 +19,11 @@
             height: 56px;
             border-radius: 100%;
             margin-right: 8px;
-
+            
             img {
                 height: 100%;
                 width: 100%;
+                object-fit: cover;
             }
         }
 
@@ -45,15 +46,26 @@
 
     .post-body {
         cursor: pointer;
-        width: 664px;
+        display: flex;
         overflow: hidden;
 
-        img {
+        &__post-img {
             width: 100%;
+            img {
+                width: 100%;
+                display: flex;    
+            }
         }
+
     }
 
     .post-footer {
-        padding-bottom: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            padding: 16px;
+        }
     }
 }

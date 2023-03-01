@@ -1,22 +1,24 @@
 import { useContext } from 'react'
-import logo from '../../../assets/logo/new-transparent-alt.png'
 import { AuthContext } from '../../../contexts/AuthProvider'
-import Input from '@mui/material/Input';
 import './Bottombar.scss'
 import SearchIcon from '@mui/icons-material/Search';
+import FeedIcon from '@mui/icons-material/Feed';
+import WhatshotIcon from '@mui/icons-material/Whatshot';
 
 export function Bottombar() {
     const { user, serverId } = useContext(AuthContext)
     return (
-        serverId &&
+        user, serverId &&
         <div className="bottombar">
             <div className="bottombar__container">
-                <div className="left">
+                <div className="bottombar__button">
+                    <FeedIcon sx={{fontSize: 32}}/>
                 </div>
-                <div className="middle">
+                <div className="bottombar__button">
+                    <WhatshotIcon sx={{fontSize: 32}}/>
                 </div>
-                <div className="right">
-
+                <div className="bottombar__button">
+                    <SearchIcon sx={{fontSize: 32}}/>
                 </div>
             </div>
         </div>

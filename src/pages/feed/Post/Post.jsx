@@ -1,4 +1,5 @@
 import './Post.scss'
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 export function Post(props) {
     return (
@@ -18,7 +19,7 @@ export function Post(props) {
                 </div>
             </div>
             <div className="post-footer">
-
+                <FavoriteBorderIcon sx={{ fontSize: 56 }} />
             </div>
         </div>
     )
