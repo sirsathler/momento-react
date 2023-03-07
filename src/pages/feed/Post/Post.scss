@@ -31,15 +31,17 @@
             color: $secondary;
 
             &__user-name {
+                color: $onBackground;
                 font-size: 16px;
                 font-weight: 600;
-
+                display: block;
             }
-
+            
             &__username {
                 color: $onBackground;
                 font-size: 16px;
                 font-style: italic;
+                display: block;
             }
         }
     }

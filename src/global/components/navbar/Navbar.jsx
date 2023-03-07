@@ -25,7 +25,7 @@ export function Navbar() {
                 <div className="right">
                     <div className="profile-info">
                         <div className="profile-info__profile-picture">
-                            <a href="/profile">
+                            <a href={`/profile/${user.user}`}>
                                 <img src={user.profilePictureURL} alt="profile-picture" />
                             </a>
                         </div>

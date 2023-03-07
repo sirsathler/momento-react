@@ -17,19 +17,19 @@ export function Feed() {
                         likesCount={4921}
                         commentsCount={6500}
                         sharesCount={12}
-                        user={"dcastelano"}
+                        user={"thenoah"}
                         />
                     <Post postImageURL={'https://static-cse.canva.com/blob/611603/screen3.jpg'}
                         likesCount={4921}
                         commentsCount={6500}
                         sharesCount={12}
-                        user={"dcastelano"}
+                        user={"thenoah"}
                         />
                     <Post postImageURL={'https://cdn.discordapp.com/attachments/1073706433750761562/1073997069322293309/file.jpg'}
                         likesCount={4921}
                         commentsCount={6500}
                         sharesCount={12}
-                        user={"dcastelano"}
+                        user={"thenoah"}
                          />
                 </div>
                 <Bottombar />

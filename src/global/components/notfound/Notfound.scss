@@ -1,0 +1,17 @@
+@import "../../../styles/variables.scss";
+
+.page-notfound {
+    color: $onBackground;
+    font-size: 32px;
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+        margin-bottom: 8px;
+        font-size: 48px;
+    }
+}
