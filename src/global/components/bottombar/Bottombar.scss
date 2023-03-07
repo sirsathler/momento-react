@@ -13,7 +13,7 @@
         justify-content: space-between;
         align-items: center;
         max-width: 1024px;
-        height: 56px;
+        height: 64px;
         margin: 0 auto;
 
         .bottombar__button {
@@ -25,6 +25,10 @@
             background-color: $background;
             cursor: pointer;
             
+            svg>path{
+                fill: $secondary;
+            }
+
             &:nth-child(2) {
                 border-right: solid 1px $onBackgroundAlt;
                 border-left: solid 1px $onBackgroundAlt;

@@ -1,5 +1,5 @@
 import './Post.scss'
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import Heart from '../../../global/icons/heart/Heart';
 
 export function Post(props) {
     return (
@@ -10,16 +10,30 @@ export function Post(props) {
                 </div>
                 <div className="post-user-info">
                     <p className="post-user-info__user-name">Doug Castelano</p>
-                    <p className="post-user-info__username light-font">@dcastelano</p>
+                    <a href={`/profile/${props.user}`} className="post-user-info__username light-font">@dcastelano</a>
                 </div>
             </div>
             <div className="post-body">
                 <div className="post-body__post-img">
                     <img src={props.postImageURL} alt="post-image" />
+                    <div className="post-img-informations">
+                        <div className="post-img-informations__stats">
+                            <Heart />
+                            <span>{props.likesCount || "0"}</span>
+                        </div>
+                        {/* <div className="post-img-informations__stats">
+                            <Comment />
+                            <span>{props.commentsCount || "0"}</span>
+                        </div>
+                        <div className="post-img-informations__stats">
+                            <Share />
+                            <span>{props.sharesCount || "0"}</span>
+                        </div> */}
+                    </div>
                 </div>
             </div>
             <div className="post-footer">
-                <FavoriteBorderIcon sx={{ fontSize: 56 }} />
+                <Heart />
             </div>
         </div>
     )

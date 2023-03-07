@@ -1,7 +1,7 @@
 import './Login.scss';
 import logo from '../../assets/logo/new-big.png'
 import LoginButton from './login-button/LoginButton';
-import { Powered } from '../../global/components/powered/Powered';
+import Powered from '../../global/components/powered/Powered';
 
 export default function Login () {
     return (

@@ -3,6 +3,7 @@
 .navbar {
     background-color: $background;
     position: fixed;
+    z-index: 1;
     top: 0;
     left: 0;
     right: 0;
@@ -18,7 +19,8 @@
         margin: 0 auto;
 
         .left {
-            max-width: 36px;
+            width: 48px;
+            height: 48px;
             cursor: pointer;
 
             img {
@@ -41,14 +43,14 @@
         }
 
         .right {
-            
+
             .profile-info {
                 &__profile-picture {
                     width: 56px;
                     height: 56px;
                     border-radius: 100%;
                     overflow: hidden;
-                    
+
                     img {
                         object-fit: cover;
                         width: 100%;

@@ -7,11 +7,12 @@ import Auth from './pages/auth/Auth';
 import { AuthProvider } from './contexts/AuthProvider';
 import { ResponseInterceptor } from './services/interceptors/ResponseInterceptor';
 
-import UserSelect from './pages/user-select/UserSelect';
 import Login from './pages/login/Login';
+import Profile from './pages/profile/Profile';
+
 import { Feed } from './pages/feed/Feed';
 import { Navbar } from './global/components/navbar/Navbar';
-import { Bottombar } from './global/components/bottombar/Bottombar';
+
 
 function App() {
 
@@ -23,10 +24,9 @@ function App() {
           <AuthProvider>
             <ResponseInterceptor />
             <Navbar />
-            <Bottombar />
             <Routes>
               <Route path="/" exact element={<ProtectedRoute><Feed /></ProtectedRoute>} />
-              <Route path="/ata" exact element={<ProtectedRoute>{<>ta</>}</ProtectedRoute>} />
+              <Route path="/profile/:user" exact element={<ProtectedRoute>{<Profile />}</ProtectedRoute>} />
               <Route path="/login" exact element={<Login />} />
               <Route path="/auth" exact element={<Auth />} />
             </Routes>

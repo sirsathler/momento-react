@@ -12,13 +12,13 @@ export function Bottombar() {
         <div className="bottombar">
             <div className="bottombar__container">
                 <div className="bottombar__button">
-                    <FeedIcon sx={{fontSize: 32}}/>
+                    <FeedIcon sx={{fontSize: 40}}/>
                 </div>
                 <div className="bottombar__button">
-                    <WhatshotIcon sx={{fontSize: 32}}/>
+                    <WhatshotIcon sx={{fontSize: 40}}/>
                 </div>
                 <div className="bottombar__button">
-                    <SearchIcon sx={{fontSize: 32}}/>
+                    <SearchIcon sx={{fontSize: 40}}/>
                 </div>
             </div>
         </div>

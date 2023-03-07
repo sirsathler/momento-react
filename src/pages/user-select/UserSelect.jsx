@@ -2,11 +2,10 @@
 import { useContext, useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../contexts/AuthProvider'
-import { Powered } from '../../global/components/powered/Powered'
+import MCPowered from '../../global/components/powered/Powered'
 import { ProfileCard } from './profile-card/ProfileCard'
 import './UserSelect.scss'
-import { UserSelectServices } from '../../services/UserSelectServices'
-// import { UserSelectServices } from './UserSelectServices.ts'
+import { UserSelectServices } from '../../services/UserSelectService'
 
 export default function UserSelect() {
     const { user, setServerId, access_token, handleLogout } = useContext(AuthContext)
@@ -59,7 +58,7 @@ export default function UserSelect() {
             </div>
 
             <a href="/login" onClick={handleLogout} className="page-user-select__logout-label light-font">acessar com outro discord</a>
-            <Powered />
+            <MCPowered />
         </div>
     )
 

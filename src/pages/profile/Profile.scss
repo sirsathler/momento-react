@@ -1,0 +1,69 @@
+@import '../../styles/variables.scss';
+
+.page-profile {
+    margin-top: 112px;
+    margin-bottom: 112px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .profile-info {
+        text-align: center;
+
+        &__username {
+            color: $onBackground;
+            font-size: 24px;
+        }
+
+        &__fullname {
+            color: $secondary;
+            font-weight: 800;
+            margin: 8px;
+            font-size: 32px;
+        }
+
+        &__bio {
+            color: $onBackground;
+            font-size: 16px;
+            font-style: italic;
+        }
+
+        &__profile-picture {
+            border-radius: 100%;
+            overflow: hidden;
+            width: 260px;
+            height: 260px;
+            margin-bottom: 16px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .profile-stats {
+        display: flex;
+        margin-top: 32px;
+        width: 50%;
+        justify-content: space-between;
+
+        .profile-stats-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            &__value {
+                color: $secondary;
+                font-weight: 700;
+                font-size: 32px;
+            }
+
+            &__label {
+                color: $onBackground;
+                font-size: 32px;
+            }
+        }
+    }
+}

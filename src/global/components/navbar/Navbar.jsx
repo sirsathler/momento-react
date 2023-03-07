@@ -1,9 +1,7 @@
 import { useContext } from 'react'
 import logo from '../../../assets/logo/new-transparent-alt.png'
 import { AuthContext } from '../../../contexts/AuthProvider'
-import Input from '@mui/material/Input';
 import './Navbar.scss'
-import SearchIcon from '@mui/icons-material/Search';
 
 export function Navbar() {
     const { user, serverId } = useContext(AuthContext)
@@ -12,7 +10,9 @@ export function Navbar() {
         <div className="navbar">
             <div className="navbar__container">
                 <div className="left">
-                    <img src={logo} alt="momento-logo" />
+                    <a href="/">
+                        <img src={logo} alt="momento-logo" />
+                    </a>
                 </div>
                 {/* <div className="middle">
                     <Input
@@ -25,11 +25,13 @@ export function Navbar() {
                 <div className="right">
                     <div className="profile-info">
                         <div className="profile-info__profile-picture">
-                            <img src={user.profilePictureURL} alt="profile-picture" />
+                            <a href="/profile">
+                                <img src={user.profilePictureURL} alt="profile-picture" />
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </div >
     )
 }
